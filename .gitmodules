@@ -1,3 +1,6 @@
 [submodule "pristine/modules/jenkins"]
 	path = pristine/modules/jenkins
 	url = git://github.com/rtyler/puppet-jenkins.git
+[submodule "with-gerrit/modules/jenkins"]
+	path = with-gerrit/modules/jenkins
+	url = git://github.com/rtyler/puppet-jenkins.git
