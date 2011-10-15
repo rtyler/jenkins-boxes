@@ -8,11 +8,11 @@ node default {
   install-jenkins-plugin {
     "git-plugin" :
       name => "git",
-      require => Class["jenkins"];
+      require => Class["jenkins::package"];
 
     "github-plugin" :
       name => "github",
-      require => Class["jenkins"];
+      require => Class["jenkins::package"];
   }
 
   group {
