@@ -11,4 +11,8 @@ Vagrant::Config.run do |config|
     puppet.manifest_file  = "base.pp"
     puppet.module_path   = "modules"
   end
+
+  config.vm.customize do |vm|
+    vm.name = "jenkins-pristine"
+  end
 end

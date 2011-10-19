@@ -15,6 +15,11 @@ node default {
       require => Class["jenkins::package"];
   }
 
+  package {
+    "git-core" :
+      ensure => installed;
+  }
+
   group {
     "puppet" :
       ensure => present;
