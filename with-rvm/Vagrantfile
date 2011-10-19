@@ -1,0 +1,18 @@
+Vagrant::Config.run do |config|
+  config.vm.box = "jenkins-pristine"
+  config.vm.box_url = "http://strongspace.com/rtyler/public/jenkins-pristine.box"
+
+  # Forward a port from the guest to the host, which allows for outside
+  # computers to access the VM, whereas host only networking does not.
+  config.vm.forward_port "jenkins", 8080, 8880
+
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "manifests"
+    puppet.manifest_file  = "base.pp"
+    puppet.module_path   = "modules"
+  end
+
+  config.vm.customize do |vm|
+    vm.name = "jenkins-with-rvm"
+  end
+end
