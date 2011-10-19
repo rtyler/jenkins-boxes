@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
-  config.vm.box = "jenkins-pristine"
-  config.vm.box_url = "http://strongspace.com/rtyler/public/jenkins-pristine.box"
+  config.vm.box = "jenkins-pristine.80ee9c6"
+  config.vm.box_url = "http://strongspace.com/rtyler/public/boxes/jenkins-pristine.80ee9c6"
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
