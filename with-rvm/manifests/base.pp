@@ -34,7 +34,7 @@ node default {
       "$ruby_18" :
         ensure => "present",
         require => Exec["system-rvm"],
-        default_use => true;
+        default_use => false;
     }
   }
 }
