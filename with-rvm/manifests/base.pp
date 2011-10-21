@@ -12,11 +12,16 @@ node default {
   user {
     "jenkins" :
       ensure => present;
+    "vagrant" :
+      ensure => present;
   }
 
   rvm::system_user {
     "jenkins" :
       require => User["jenkins"];
+
+    "vagrant" :
+      require => User["vagrant"];
   }
 
   if $rvm_installed == "true" {
